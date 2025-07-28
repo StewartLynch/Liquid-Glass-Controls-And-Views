@@ -1,0 +1,70 @@
+{
+  "fill" : {
+    "automatic-gradient" : "srgb:0.57919,0.12801,0.57269,1.00000"
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "fill-specializations" : [
+            {
+              "value" : {
+                "solid" : "srgb:1.00000,1.00000,1.00000,1.00000"
+              }
+            },
+            {
+              "appearance" : "dark",
+              "value" : {
+                "solid" : "srgb:1.00000,1.00000,1.00000,1.00000"
+              }
+            }
+          ],
+          "glass" : false,
+          "image-name" : "1.circle.png",
+          "name" : "1.circle",
+          "position" : {
+            "scale" : 15,
+            "translation-in-points" : [
+              222.40625,
+              223.2578125
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+        {
+          "image-name" : "LiquidGlassBitMoji.png",
+          "name" : "LiquidGlassBitMoji",
+          "position" : {
+            "scale" : 1.95,
+            "translation-in-points" : [
+              -20.640625,
+              -126.890625
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "squares" : "shared"
+  }
+}
