@@ -18,15 +18,51 @@
 import SwiftUI
 
 struct GlassEffectsView: View {
+    @State private var spacing = 0.0
     var body: some View {
         NavigationStack {
-            VStack {
-                
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background {
-                ScrollView([.horizontal, .vertical]){
-                    Image(.stream)
+            Slider(value: $spacing, in: 0...80)
+                .padding()
+            GlassEffectContainer(spacing: spacing) {
+                VStack {
+                    Text("Hello World")
+                        .font(.largeTitle)
+                        .padding()
+                        .glassEffect(.clear, in: .rect(cornerRadius: 10))
+                    Image(systemName: "applelogo")
+                        .font(.system(size: 36))
+                        .frame(width: 80, height: 80)
+                        .glassEffect(.clear)
+                    Image(systemName: "applelogo")
+                        .font(.system(size: 36))
+                        .frame(width: 80, height: 80)
+                        .glassEffect(.regular.interactive())
+                        .onTapGesture {
+                            // Do something
+                        }
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "applelogo")
+                            .font(.system(size: 36))
+                            .frame(width: 80, height: 80)
+                    }
+                    .buttonStyle(.glass)
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "applelogo")
+                            .font(.system(size: 36))
+                            .frame(width: 80, height: 80)
+                    }
+                    .buttonStyle(.plain)
+                    .glassEffect()
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background {
+                    ScrollView([.horizontal, .vertical]){
+                        Image(.stream)
+                    }
                 }
             }
             .navigationTitle("Glass Effect")
