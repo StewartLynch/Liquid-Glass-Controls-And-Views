@@ -18,34 +18,60 @@
 import SwiftUI
 
 struct ButtonsView: View {
+    @State private var removeBackground = false
     var body: some View {
         NavigationStack {
+            Toggle("Remove Background", isOn: $removeBackground)
+                .padding()
             Form {
-                Section("Pre Liquid Glass") {
-                    LabeledContent("None") {
-
+                Group {
+                    Section("Pre Liquid Glass") {
+                        LabeledContent("None") {
+                            Button("Label") {
+                                
+                            }
+                        }
+                        LabeledContent("Borderless") {
+                            Button("Label") {
+                                
+                            }
+                            .buttonStyle(.borderless)
+                        }
+                        LabeledContent("Plain") {
+                            Button("Label") {
+                                
+                            }
+                            .buttonStyle(.plain)
+                        }
+                        LabeledContent("Bordered") {
+                            Button("Label") {
+                                
+                            }
+                            .buttonStyle(.bordered)
+                        }
+                        LabeledContent("Boarded Prominent") {
+                            Button("Label") {
+                                
+                            }
+                            .buttonStyle(.borderedProminent)
+                        }
                     }
-                    LabeledContent("Borderless") {
-
-                    }
-                    LabeledContent("Plain") {
-
-                    }
-                    LabeledContent("Bordered") {
-
-                    }
-                    LabeledContent("Boarded Prominent") {
-                        
+                    Section("Liquid Glass") {
+                        LabeledContent("Glass") {
+                            Button("Label") {
+                                
+                            }
+                            .buttonStyle(.glass)
+                        }
+                        LabeledContent("Glass Prominent") {
+                            Button("Label") {
+                                
+                            }
+                            .buttonStyle(.glassProminent)
+                        }
                     }
                 }
-                Section("Liquid Glass") {
-                    LabeledContent("Glass") {
-                        
-                    }
-                    LabeledContent("Glass Prominent") {
-                        
-                    }
-                }
+                .listRowBackground(removeBackground ? Color.clear : Color(.systemBackground))
             }
             .navigationTitle("Buttons")
         }
