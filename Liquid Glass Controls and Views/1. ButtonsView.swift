@@ -25,6 +25,9 @@ struct ButtonsView: View {
                     LabeledContent("None") {
 
                     }
+                    LabeledContent("Borderless") {
+
+                    }
                     LabeledContent("Plain") {
 
                     }
