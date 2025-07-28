@@ -18,10 +18,56 @@
 import SwiftUI
 
 struct GlassEffectNameSpaceView: View {
+    @Namespace var namespace
+    @Namespace var namespace2
     var body: some View {
         NavigationStack{
             VStack {
-                
+                GlassEffectContainer {
+                    HStack {
+                        Image(systemName: "cloud.bolt.rain.fill")
+                            .font(.system(size: 36))
+                            .frame(width: 80, height: 80)
+                            .glassEffect()
+                            .glassEffectUnion(id: 1, namespace: namespace)
+                        Image(systemName: "sun.rain.fill")
+                            .font(.system(size: 36))
+                            .frame(width: 80, height: 80)
+                            .glassEffect()
+                            .glassEffectUnion(id: 1, namespace: namespace)
+                        Group {
+                            Image(systemName: "cloud.bolt.rain.fill")
+                                .font(.system(size: 36))
+                                .frame(width: 80, height: 80)
+                                .glassEffect()
+                            Image(systemName: "sun.rain.fill")
+                                .font(.system(size: 36))
+                                .frame(width: 80, height: 80)
+                                .glassEffect()
+                        }
+                        .glassEffectUnion(id: 2, namespace: namespace)
+                    }
+                    HStack {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "cloud.bolt.rain.fill")
+                                .font(.system(size: 36))
+                                .frame(width: 80, height: 80)
+                        }
+                            .glassEffect()
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "sun.rain.fill")
+                                .font(.system(size: 36))
+                                .frame(width: 80, height: 80)
+                        }
+                            .glassEffect()
+                    }
+                    .buttonStyle(.plain)
+                    .glassEffectUnion(id: 1, namespace: namespace2)
+                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background {
