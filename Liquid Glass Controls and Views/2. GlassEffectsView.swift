@@ -20,7 +20,7 @@ import SwiftUI
 struct GlassEffectsView: View {
     var body: some View {
         NavigationStack {
-            VStack(spacing: 20) {
+            VStack {
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
