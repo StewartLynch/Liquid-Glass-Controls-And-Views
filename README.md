@@ -1,8 +1,7 @@
 # Liquid Glass Controls and Views
 
-![AppIcon](assets/AppIcon.png) This is the starter project for the  first video on the applying the new Liquid Glass effects to button controls and views.
+![AppIcon](Images/AppIcon.png) This is the starter project for the  first video on the applying the new Liquid Glass effects to button controls and views.
 
-Release Date: August 31, 2025
 
 If you want to support my work, you can - </br>
 
