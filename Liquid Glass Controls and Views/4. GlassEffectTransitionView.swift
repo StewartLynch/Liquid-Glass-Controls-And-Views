@@ -33,7 +33,7 @@ struct GlassEffectTransitionView: View {
                             .glassEffect(.regular.tint(.teal.opacity(0.4)).interactive())
                             .glassEffectID("photo", in: namespace)
                             .onTapGesture {
-                                withAnimation {
+                                withAnimation(.easeOut(duration: 5)) {
                                     isExpanded.toggle()
                                 }
                             }
@@ -68,7 +68,7 @@ struct GlassEffectTransitionView: View {
                             .glassEffectID("plus", in: namespace2)
                             .contentTransition(.symbolEffect(.replace.magic(fallback: .replace)))
                             .onTapGesture {
-                                withAnimation {
+                                withAnimation(.easeOut(duration: 5)){
                                     isExpanded.toggle()
                                 }
                             }
